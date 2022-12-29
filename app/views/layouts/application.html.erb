@@ -23,9 +23,6 @@
     <!--====== Animate css ======-->
     <%= stylesheet_link_tag "animate", "data-turbo-track": "reload" %>
 
-    <!--====== Fontawesome css ======-->
-    <%= stylesheet_link_tag "font-awesome.min", "data-turbo-track": "reload" %>
-
     <!--====== Magnific Popup css ======-->
     <%= stylesheet_link_tag "magnific-popup", "data-turbo-track": "reload" %>
 
@@ -75,7 +72,9 @@
                     <div class="header_top_login">
                         <ul>
                             <li><a href="#">Create An Account</a></li>
-                            <li><a class="main-btn" href="#"><i class="fa fa-user-o"></i> Log In</a></li>
+                            <li>
+                                <%# <a class="main-btn" href="#"><i class="fa fa-user-o"></i> Log In</a> %>
+                                <%= link_to "Log in", new_user_session_path, class:"main-btn" %><i class="fa fa-user-o"></i></li>
                         </ul>
                     </div>
                 </div>
