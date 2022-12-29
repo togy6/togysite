@@ -1,15 +1,280 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Togysite</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+    <!--====== Title ======-->
+    <title>Edustdy – Education Html Template</title>
 
-  <body>
+    <!--====== Favicon Icon ======-->
+    <%= favicon_link_tag 'favicon.png' %>
+    <!--====== Bootstrap css ======-->
+    <%= stylesheet_link_tag "bootstrap.min", "data-turbo-track": "reload" %>
+
+    <!--====== Animate css ======-->
+    <%= stylesheet_link_tag "animate", "data-turbo-track": "reload" %>
+
+    <!--====== Fontawesome css ======-->
+    <%= stylesheet_link_tag "font-awesome.min", "data-turbo-track": "reload" %>
+
+    <!--====== Magnific Popup css ======-->
+    <%= stylesheet_link_tag "magnific-popup", "data-turbo-track": "reload" %>
+
+    <!--====== Nice Select css ======-->
+    <%= stylesheet_link_tag "nice-select", "data-turbo-track": "reload" %>
+
+    <!--====== Slick css ======-->
+    <%= stylesheet_link_tag "slick", "data-turbo-track": "reload" %>
+
+    <!--====== Default css ======-->
+    <%= stylesheet_link_tag "default", "data-turbo-track": "reload" %>
+
+    <!--====== Style css ======-->
+    <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+
+    <!--====== Responsive css ======-->
+    <%= stylesheet_link_tag "responsive", "data-turbo-track": "reload" %>
+
+
+</head>
+
+<body>
+
+    <!--====== PRELOADER PART START ======-->
+
+    <%# <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div> %>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== Header PART START ======-->
+
+    <section class="header_area">
+        <div class="header_top">
+            <div class="container">
+                <div class="header_top_wrapper d-flex justify-content-center justify-content-md-between">
+                    <div class="header_top_info d-none d-md-block">
+                        <ul>
+                            <li><%= image_tag "call.png" %><a href="#">+91 458 654 528</a></li>
+                            <li><%= image_tag "mail.png" %><a href="#">info@example.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="header_top_login">
+                        <ul>
+                            <li><a href="#">Create An Account</a></li>
+                            <li><a class="main-btn" href="#"><i class="fa fa-user-o"></i> Log In</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="index.html">
+                        <%= image_tag "logo.png" %>
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li>
+                                <a href="index.html">Home <i class="fa fa-chevron-down"></i></a>
+                                
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Home 01</a></li>
+                                    <li><a href="index-2.html">Home 02</a></li>
+                                    <li><a href="index-3.html">Home 03</a></li>
+                                    <li><a href="index-4.html">Home 04</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="courses.html">Courses <i class="fa fa-chevron-down"></i></a>
+                                
+                                <ul class="sub-menu">
+                                    <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="courses-details.html">Courses Details</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="active" href="blog.html">Blog <i class="fa fa-chevron-down"></i></a>
+                                
+                                <ul class="sub-menu">
+                                    <li><a class="active" href="blog.html">Blog</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="navbar_meta">
+                        <ul>
+                            <li>
+                                <a id="search" href="#"><%= image_tag "search.png" %></a>
+                                <div class="search_bar">
+                                    <input type="text" placeholder="Search">
+                                    <button><i class="fa fa-search"></i></button>
+                                </div>
+                            </li>
+                            <li><a href="#"><%= image_tag "cart.png" %> <span>0</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Header PART ENDS ======-->
+
     <%= yield %>
-  </body>
+    <!--====== Footer PART START ======-->
+
+    <footer class="footer_area bg_cover" style="background-image: url(<%= image_tag "footer_bg.jpg" %>)">
+        <div class="footer_widget pt-80 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="footer_about mt-50">
+                            <a href="#"><%= image_tag "logo.png" %></a>
+                            
+                            <p>Lorem ipsum dolor sit amet dolor, con sect etur adipiscing elitorem ipsum dolorsit amet dolor, con sectetur con sectetur adipisci adipiscing.</p>
+                            
+                            <ul class="footer_social">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="footer_widget_wrapper d-flex flex-wrap">
+                            <div class="footer_link mt-50">
+                                <h5 class="footer_title">Quick Links</h5>
+
+                                <div class="footer_link_wrapper d-flex">
+                                    <ul class="link">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Education</a></li>
+                                        <li><a href="#">Our Events</a></li>
+                                        <li><a href="#">Our Packages</a></li>
+                                    </ul>
+                                    <ul class="link">
+                                        <li><a href="#">Our Team</a></li>
+                                        <li><a href="#">Latest News</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms & Condations</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="footer_contact mt-50">
+                                <h5 class="footer_title">Contact</h5>
+                                
+                                <ul class="contact">
+                                    <li>Location : 27 State, New York, NY 1002, USA</li>
+                                    <li>Emal : infoexample@gmail.com</li>
+                                    <li>Phone : +(321)948 754</li>
+                                    <li>Fax:+1-212-98765543</li>
+                                    <li><a href="#">View Location on Google Map</a></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer_copyright">
+            <div class="container">
+                <div class="footer_copyright_wrapper text-center d-md-flex justify-content-between">
+                    <div class="copyright">
+                        <p>Designed & Developed By Love</p>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; Copyrights 2022 Edustdy All rights reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--====== Footer PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    
+
+
+
+
+
+
+
+
+
+    <!--====== jquery js ======-->
+    <% javascript_include_tag "vendor/modernizr-3.6.0.min" %>
+    <% javascript_include_tag "vendor/jquery-1.12.4.min" %>
+
+    <!--====== Bootstrap js ======-->
+    <% javascript_include_tag "bootstrap.min" %>
+    <% javascript_include_tag "popper.min" %>
+
+    <!--====== Slick js ======-->
+    <% javascript_include_tag "slick.min" %>
+
+    <!--====== Magnific Popup js ======-->
+    <% javascript_include_tag "jquery.magnific-popup.min" %>
+
+    <!--====== Counter Up js ======-->
+    <% javascript_include_tag "waypoints.min" %>
+    <% javascript_include_tag "jquery.counterup.min" %>
+
+    <!--====== Nice Select js ======-->
+    <% javascript_include_tag "jquery.nice-select.min" %>
+    
+    <!--====== Count Down js ======-->
+    <% javascript_include_tag "jquery.countdown.min" %>
+    
+    <!--====== Appear js ======-->
+    <% javascript_include_tag "jquery.appear.min" %>
+
+    <!--====== Main js ======-->
+    <% javascript_include_tag "main" %>
+
+</body>
+
 </html>
